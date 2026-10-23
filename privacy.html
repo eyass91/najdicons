@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية · Najdicons Privacy</title>
+<style>
+:root{--bg:#FAFAF7;--ink:#1D1D1B;--dim:#6F6D67;--line:rgba(0,0,0,.1);--chip:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0F0F10;--ink:#EDEBE6;--dim:#9A978F;--line:rgba(255,255,255,.12);--chip:#1E1E20;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F0F10;--ink:#EDEBE6;--dim:#9A978F;--line:rgba(255,255,255,.12);--chip:#1E1E20;color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 -apple-system,"SF Arabic","Geeza Pro","Segoe UI",sans-serif}
+main{max-width:640px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:20px;margin:28px 0 6px}
+.date{color:var(--dim);font-size:14px;margin:0 0 20px}
+section+section{border-top:1px solid var(--line);margin-top:40px;padding-top:32px}
+p{margin:0 0 12px}a{color:inherit}
+.theme{position:fixed;top:12px;left:12px;border:0;border-radius:18px;background:var(--chip);color:var(--ink);box-shadow:0 0 0 1px var(--line);font:600 13px/1 -apple-system,sans-serif;padding:9px 12px;cursor:pointer}
+</style>
+</head>
+<body>
+<button class="theme" id="t" aria-label="Light or dark">◐</button>
+<main>
+<section lang="ar" dir="rtl">
+<h1>سياسة الخصوصية — الطوالع النجدية</h1>
+<p class="date">آخر تحديث: أكتوبر ٢٠٢٦</p>
+<p>لا يجمع التطبيق أي بيانات عنك، ولا يرسل أي شيء إلى أي خادم.</p>
+<h2>الموقع</h2>
+<p>يُقرأ على جهازك فقط لاختيار أقرب مدينة لطبقة الحرارة في الحلقة، ولا يغادر جهازك ولا يُحفظ خارجه. يمكنك رفض الإذن، ويعمل التطبيق كاملًا.</p>
+<h2>التتبع والمشاركة</h2>
+<p>لا أدوات تتبع ولا تحليل، ولا مشاركة مع أي طرف.</p>
+<h2>للتواصل</h2>
+<p><a href="mailto:info@najdicon.space">info@najdicon.space</a></p>
+</section>
+<section lang="en" dir="ltr">
+<h1>Privacy Policy — Najdicons</h1>
+<p class="date">Last updated: October 2026</p>
+<p>The app collects no data about you and sends nothing to any server.</p>
+<h2>Location</h2>
+<p>Read on your iPhone only, to pick the nearest city for the ring's temperature layer. It never leaves your device. You can decline, and the app still works fully.</p>
+<h2>Tracking and sharing</h2>
+<p>No tracking or analytics, and nothing is shared with anyone.</p>
+<h2>Contact</h2>
+<p><a href="mailto:info@najdicon.space">info@najdicon.space</a></p>
+</section>
+</main>
+<script>
+const r=document.documentElement,b=document.getElementById('t');
+let t=null;try{t=localStorage.getItem('nc-theme')}catch(e){}
+if(t)r.dataset.theme=t;
+b.onclick=()=>{const dark=(r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'))==='dark';r.dataset.theme=dark?'light':'dark';try{localStorage.setItem('nc-theme',r.dataset.theme)}catch(e){}};
+</script>
+</body>
+</html>
